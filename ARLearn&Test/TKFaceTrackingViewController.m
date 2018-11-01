@@ -11,7 +11,7 @@
 @interface TKFaceTrackingViewController ()<ARSCNViewDelegate>
 {
     ARSCNView *_scnView;
-    ARWorldTrackingConfiguration *_configuration;
+    ARFaceTrackingConfiguration *_configuration;
 }
 
 @end
@@ -33,7 +33,7 @@
 {
     [super viewWillAppear:animated];
     
-    _configuration = [[ARWorldTrackingConfiguration alloc] init];
+    _configuration = [[ARFaceTrackingConfiguration alloc] init];
 //    _configuration.planeDetection = ARPlaneDetectionHorizontal;
     [_scnView.session runWithConfiguration:_configuration];
 }
